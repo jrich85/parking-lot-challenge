@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/parking-lot', [ParkingSpotController::class, 'index']);
-Route::post('/parking-spot/{id}/park', [ParkingSpotController::class, 'park']);
-Route::post('/parking-spot/{id}/unpark', [ParkingSpotController::class, 'unpark']);
+Route::post('/parking-spot/{parkingSpot}/park', [ParkingSpotController::class, 'park']);
+Route::post('/parking-spot/{parkingSpot}/unpark', [ParkingSpotController::class, 'unpark']);

@@ -14,7 +14,7 @@ class ParkingSpotFactory extends Factory
     {
         return [
             'is_occupied' => $this->faker->boolean(),
-            'occupant_type' => $this->faker->word(),
+            'occupant_type' => fn($attributes) => $attributes['is_occupied']? $this->faker->randomElement(['car', 'motorcycle', 'van']) : null,
             'floor' => $this->faker->randomNumber(),
             'sector' => $this->faker->word(),
             'created_at' => Carbon::now(),
