@@ -1,2 +1,3 @@
 2024-05-23 21:30 - Getting started.
 2024-05-23 21:48 - Routes, models, migrations, controllers, etc. created.
+2024-05-23 22:33 - Shoring up validation.
