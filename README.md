@@ -1,4 +1,4 @@
-# Technical Challenge - Parking Lot
+# Parking Lot Challenge
 
 ## Installation
 
@@ -13,10 +13,7 @@
 
 Confronted with the ongoing challenge of locating parking spaces within our parking structures in congested city
 streets, we embarked on a mission to rethink the parking experience using object-oriented design principles. Create the
-necessary APIs to satisfy the requirements below (no frontend work required).
-
-Feel free to use your imagination when making product decisions and determining functionality, while keeping outcomes
-simple. We won’t be running the code (or deploying it to prod), so it doesn’t need to be perfect.
+necessary APIs to satisfy the requirements below.
 
 ## Implementation
 
@@ -45,20 +42,22 @@ from a trusted source.
 2. `[POST] /api/parking-spot/{id}/unpark`
 3. `[POST] /api/parking-lot`
 
-## Instructions
+# Notes for the Reader
 
-1. We ask that you allocate an hour to complete as much as possible. Don't worry if you do not finish everything, or
-   feel free to be creative and add functionality.
-2. Clone the specified technical repository and follow the steps in the README to set up your local environment. While
-   we've included what we consider essential packages for the task (Laravel, PostgreSQL, and Redis) you're free to
-   modify as needed, but it's not required.
-3. Upload your solution to a private GitHub repository under your personal account. Please add REDACTED and REDACTED as
-   collaborators.
-4. Reach out to your talent representative indicating that you have completed your challenge, providing the repository
-   URL.
+This was a fun task to undertake, but the challenge was to see how much I could get done in one hour, so take this in
+mind when reviewing the solution.
 
-## Assessment
+## Running the seeder
 
-1. Code should be clean, well structured, and testable.
-2. Be prepared to discuss your solution in a follow-up code review with one of our peers.
-3. Tests are nice, but optional. We'll discuss testing strategy, so keep this in mind.
+Run `docker-compose exec my-app php artisan migrate --seed`,
+
+Or if you want to start fresh:
+
+Run `docker-compose exec my-app php artisan migrate:fresh --seed`
+
+This will create a bunch of parking spots in one parking lot, so you can see the actions take effect.
+
+## Future steps
+
+Future steps would be to add filtering to the summary endpoint, allowing for focusing on different
+parking lots, floors, sectors, or places to fit a van, to name a few.
