@@ -1,1 +1,2 @@
 2024-05-23 21:30 - Getting started.
+2024-05-23 21:48 - Routes, models, migrations, controllers, etc. created.
